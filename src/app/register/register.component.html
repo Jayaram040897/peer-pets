@@ -1,0 +1,29 @@
+
+<app-header></app-header>
+<section>
+  <div class="container">
+    <div class="user signinBx">
+      <div class="imgBx"><img src="../../assets/cute_cat.jpg" alt="" /></div>
+      <div class="formBx">
+        <form [formGroup]="signUpform">
+          <h2>Sign Up</h2>
+          <input type="text" (keypress)="omit_special_char($event)" formControlName="username" placeholder="Username" (blur)="userIdCheck()" />
+          <p *ngIf="userExists" class="invalid">UserID already exists!!</p>
+          <p *ngIf="usernotExists" class="valid">UserID is available</p>
+          <p *ngIf=" submitAttempt && !signUpform.controls.username">
+            Please Enter username</p>
+          <input type="password" formControlName="password" placeholder="Create Password" minlength="6"/>
+            <p *ngIf="!signUpform.controls.password.valid  &&  submitAttempt">
+              Please Enter password with minimum 6 characters</p>
+          <input type="password" (keypress)="passCheck()"  formControlName="confirmPassword" placeholder="Confirm Password" />
+          <p *ngIf="signUpform.controls['confirmPassword'].errors?.passwordMatch" class="invalid">Password
+            and Confirm Password didn't match.</p>
+            <p *ngIf="!signUpform.controls.password.valid  && submitAttempt">
+              Please Enter your password again!!</p>
+          <button  class="btn text-center" style="background-color: #FA4A0C;color: white;border-radius: 40px;margin-left: 35%;
+          margin-top: 2%;width: 8rem;font-size: 19px;font-weight: 800" (click)="onSubmit()">Sign Up</button>
+        </form>
+      </div>
+    </div>
+ </div>
+ </section>

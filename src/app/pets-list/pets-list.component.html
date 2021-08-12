@@ -1,0 +1,51 @@
+<app-header></app-header>
+<section>
+  <div class="container" style="margin-top: 2%;">
+    <label style="
+        font-size: 30px;
+        margin-left: 2%;
+    ">Pets List</label>
+    <form [formGroup]="searchForm">
+      <span style="float: right;
+        margin-right: 2%;
+        margin-bottom: 1%;">
+        <input type="text" class="form-control" placeholder="Search" (input)="searchValue()"
+          formControlName="searchValue">
+      </span>
+
+    </form>
+    <!-- <span style=
+        "float: right;
+        margin-right: 2%;
+        margin-top: 1%;
+        margin-bottom: 1%;">
+        <input type="text" class="form-control" placeholder="Advance Search" aria-label="Advance Search">
+        </span> -->
+
+    <!-- </div> -->
+    <table class="datatable table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th class="text-center">#</th>
+          <th class="text-center">Pet Name</th>
+          <th class="text-center">Place</th>
+          <th class="text-center">Age</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pets of petList ; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{pets.name}}</td>
+          <td>{{pets.place}}</td>
+          <td>{{pets.age}}</td>
+          <td>
+            <button *ngIf=" pets.status === 0 " type="button" class="btn btn-primary btn-xl"
+              (click)="buyPet(pets)">Buy</button>
+            <button *ngIf=" pets.status === 1 " type="button" class="btn btn-secondry btn-xl">Sold</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

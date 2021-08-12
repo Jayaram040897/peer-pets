@@ -1,0 +1,28 @@
+<app-header></app-header>
+<section>
+  <div class="container" style="margin-top: 2%;">
+    <label style="
+        font-size: 30px;
+        margin-left: 2%;
+    ">My Pets List</label>
+    <!-- </div> -->
+    <table class="datatable table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th class="text-center">#</th>
+          <th class="text-center">Pet Name</th>
+          <th class="text-center">Place</th>
+          <th class="text-center">Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pets of myPetList ; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{pets.name}}</td>
+          <td>{{pets.place}}</td>
+          <td>{{pets.age}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
