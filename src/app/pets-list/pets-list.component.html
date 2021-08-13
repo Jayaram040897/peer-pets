@@ -1,28 +1,14 @@
 <app-header></app-header>
 <section>
-  <div class="container" style="margin-top: 2%;">
-    <label style="
-        font-size: 30px;
-        margin-left: 2%;
-    ">Pets List</label>
+  <div class="container containerStyle" >
+    <label class="petsListTxt">Pets List</label>
     <form [formGroup]="searchForm">
-      <span style="float: right;
-        margin-right: 2%;
-        margin-bottom: 1%;">
+      <span class="searchInput">
         <input type="text" class="form-control" placeholder="Search" (input)="searchValue()"
           formControlName="searchValue">
       </span>
 
     </form>
-    <!-- <span style=
-        "float: right;
-        margin-right: 2%;
-        margin-top: 1%;
-        margin-bottom: 1%;">
-        <input type="text" class="form-control" placeholder="Advance Search" aria-label="Advance Search">
-        </span> -->
-
-    <!-- </div> -->
     <table class="datatable table table-striped table-bordered">
       <thead>
         <tr>

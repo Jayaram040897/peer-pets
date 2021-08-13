@@ -1,14 +1,14 @@
 <ul class="topnav" *ngIf="userDetails.length !== 0">
-  <li style="color: white;margin-left: 2%;font-size: 40px;">Pets Peers</li>
+  <li class="pet-peersTxt">Pets Peers</li>
+  <li class="right"><a (click)="logout()" class="logOutBtn">Logout</a></li>
   <li class="right"><a *ngIf="userDetails.isAdmin" href="add-pet">Add Pets</a></li>
   <li class="right"><a href="my-pets">My Pets</a></li>
   <li class="right"><a href="pets-list">All Pets List</a></li>
-  <li class="right"><a (click)="logout()" style="cursor: pointor;">Logout</a></li>
 
 </ul>
 
 <ul class="topnav" *ngIf="userDetails.length === 0">
-  <li style="color: white;margin-left: 2%;font-size: 40px;">Pets Peers</li>
+  <li class="pet-peersTxt">Pets Peers</li>
   <li class="right"><a href="register">User Registration</a></li>
   <li class="right"><a href="login">Login</a></li>
 </ul>

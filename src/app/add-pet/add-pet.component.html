@@ -1,11 +1,4 @@
-<ul class="topnav">
-  <li style="color: white;margin-left: 2%;font-size: 40px;">Pets Peers</li>
-  <li class="right"><a routerLink="">Logout</a></li>
-  <li class="right"><a  href="add-pet">Add Pets</a></li>
-  <li class="right"><a  href="my-pets">My Pets</a></li>
-  <li class="right" ><a  href="pets-list" >Home</a></li>
-</ul>
-
+<app-header></app-header>
 
 <section>
   <div class="container">
@@ -16,7 +9,7 @@
           <input type="text" formControlName="name" placeholder="Name" />
           <input type="text" formControlName="age" placeholder="Age" />
           <input type="text" formControlName="place" placeholder="Place" />
-          <button  class="btn text-center" style="background-color: #FA4A0C;color: white;border-radius: 40px;margin-left: 44%;margin-top: 5%;width: 8rem;font-size: 19px;font-weight: 800" (click)="onAddPet()">Add</button>
+          <button  class="btn text-center btn-style" (click)="onAddPet()">Add</button>
         </form>
       </div>
     </div>

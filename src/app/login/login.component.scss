@@ -187,6 +187,17 @@ section .container.active .signinBx .imgBx {
   left: -100%;
 }
 
+.loginBtn{
+  background-color: #FA4A0C;
+  color: white;
+  border-radius: 40px;
+  margin-left: 35%;
+  margin-top: 2%;
+  width: 8rem;
+  font-size: 19px;
+  font-weight: 800
+}
+
 @media (max-width: 991px) {
   section .container {
     max-width: 400px;

@@ -196,6 +196,19 @@ section .container.active .signinBx .imgBx {
   border-radius: 10px;
 }
 
+.petsListTxt{
+  font-size: 30px;
+        margin-left: 2%;
+}
+.searchInput{
+  float: right;
+        margin-right: 2%;
+        margin-bottom: 1%;
+}
+.containerStyle{
+  margin-top: 2%;
+}
+
 @media (max-width: 991px) {
   section .container {
     max-width: 400px;

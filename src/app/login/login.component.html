@@ -12,8 +12,7 @@
           <input type="password"  placeholder="Password" formControlName="password" />
           <p *ngIf="submitAttempt && loginform.controls.password.invalid">
             Please Enter a password</p>
-          <button  class="btn text-center" style="background-color: #FA4A0C;color: white;border-radius: 40px;    margin-left: 35%;
-          margin-top: 2%;width: 8rem;font-size: 19px;font-weight: 800" (click)="onSubmit()">Login</button>
+          <button  class="btn text-center loginBtn"  (click)="onSubmit()">Login</button>
         </form>
       </div>
     </div>
