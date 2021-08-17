@@ -11,10 +11,11 @@ import { AddPetComponent } from './add-pet/add-pet.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyPetsListComponent } from './my-pets-list/my-pets-list.component';
 import { HeaderComponent } from './header/header.component';
 
+import { AppHttpInterceptor } from './app-http.interceptor';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { HeaderComponent } from './header/header.component';
     NgbModule,
     HttpClientModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient,{ provide: HTTP_INTERCEPTORS, useClass: AppHttpInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

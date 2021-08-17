@@ -29,10 +29,12 @@ export class LoginComponent implements OnInit {
     }else{
       let data = this.loginform.value;
       this.authService.login(data).subscribe((res:any) => {
+        console.log(res,'res');
         if(res.success){
           alert("Loggedin Successfully!!");
           this.router.navigate(['pets-list'])
           localStorage.setItem('token',res.token);
+          localStorage.setItem('refreshToken',res.refreshToken);
           localStorage.setItem('userDetails',JSON.stringify(res.user));
         }else{
           alert("Username / Password is incorrect!!")

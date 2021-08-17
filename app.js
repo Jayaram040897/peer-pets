@@ -12,6 +12,7 @@ const routesApi = require('./api/routes/index');
 
 const app = express();
 const cors = require("cors");
+app.options('*', cors())
 app.use(cors());
 
 // view engine setup for local

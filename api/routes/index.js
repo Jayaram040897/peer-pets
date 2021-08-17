@@ -9,6 +9,9 @@ const events = require('../controllers/eventsController')
 module.exports.secret = {
   'secret': 'pets'
 };
+module.exports.secretRefresh = {
+  'secret': 'petsPeer'
+};
 
 // authentication
 router.post('/register', ctrlAuth.register);
